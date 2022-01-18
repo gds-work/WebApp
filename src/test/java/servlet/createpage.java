@@ -1,4 +1,4 @@
-package servlet;
+	package servlet;
 import java.io.*;
 import java.util.*;
 import javax.servlet.*;
@@ -17,7 +17,7 @@ public class createpage extends HttpServlet {
 		try
 		{
 			Class.forName("org.postgresql.Driver");
-			String jdbcUrl="jdbc:postgresql://0.0.0.0:5431/postgres";
+			String jdbcUrl="jdbc:postgresql://localhost/todoapp";
 			String username="dbuser";
 			String password="admin2021";
 		
