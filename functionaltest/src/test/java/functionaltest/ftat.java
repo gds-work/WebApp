@@ -49,7 +49,7 @@ public class ftat {
 		welcome.isDisplayed();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		WebElement prepair = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//p[text()='REPAIR']")));
+				.visibilityOfElementLocated(By.xpath("//p[text()='PAYMENT']")));
 		prepair.isDisplayed();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.get(URL1);
