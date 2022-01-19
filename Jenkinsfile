@@ -24,6 +24,7 @@ pipeline {
                 sh 'cp target/myweb.war /opt/tomcat/webapps'
 		sh '	/opt/tomcat/bin/catalina.sh stop'
 		sh '	/opt/tomcat/bin/catalina.sh start'
+		sh 'sleep 100'
             }
         }
 
