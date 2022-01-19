@@ -44,7 +44,7 @@ pipeline {
     post {
         always {
             junit 'target/surefire-reports/**/*.xml'
-            junit 'Acceptancetest/target/surefire-reports/**/*.xml'
+            junit 'functionaltest/target/surefire-reports/**/*.xml'
         }
     }
 
