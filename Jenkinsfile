@@ -21,7 +21,7 @@ pipeline {
         stage('deploy-to-test') {
             steps {
                 echo 'Deploying war in Test'
-                sh 'cp target/myweb.war /var/lib/tomcat9/webapps'
+                sh 'cp target/myweb.war $CATALINA_HOME/webapps'
 		sh '	/usr/share/tomcat9/bin/catalina.sh stop'
 		sh '	/usr/share/tomcat9/bin/catalina.sh start'
             }
