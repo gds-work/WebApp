@@ -27,10 +27,10 @@ pipeline {
             }
         }
 
-        stage('AcceptanceTest') {
+        stage('FunctionalTest') {
             steps {
-                echo 'Running in Acceptance Test'
-                sh 'mvn -f Acceptancetest/ compile test'
+                echo 'Running in Functional Test'
+                sh 'mvn -f functionaltest/ compile test'
             }
         }
 
