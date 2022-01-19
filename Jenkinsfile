@@ -22,8 +22,8 @@ pipeline {
             steps {
                 echo 'Deploying war in Test'
                 sh 'cp target/myweb.war /opt/tomcat/webapps'
-		sh '	/opt/tomcat/bin/catalina.sh stop'
-		sh '	/opt/tomcat/bin/catalina.sh start'
+		sh 'sudo service tomcat stop'
+		sh 'sudo service tomcat start'
             }
         }
 
