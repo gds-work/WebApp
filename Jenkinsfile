@@ -14,14 +14,14 @@ pipeline {
             steps {
                 echo 'Code Build and Unit Testing...'
                 sh 'mvn package'
-                sh "mv target/*.war target/QAWebapp.war"
+                sh "mv target/*.war target/myweb.war"
             }
         }
 
         stage('deploy-to-test') {
             steps {
                 echo 'Deploying war in Test'
-                sh 'cp target/QAWebapp.war /opt/tomcat/webapps'
+                sh 'cp target/myweb.war /opt/tomcat/webapps'
 		sh '	/opt/tomcat/bin/catalina.sh stop'
 		sh '	/opt/tomcat/bin/catalina.sh start'
             }
@@ -30,7 +30,7 @@ pipeline {
         stage('AcceptanceTest') {
             steps {
                 echo 'Running in Acceptance Test'
-                sh 'mvn -f functionaltest/ compile test'
+                sh 'mvn -f Acceptancetest/ compile test'
             }
         }
 
