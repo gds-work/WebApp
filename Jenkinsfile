@@ -8,7 +8,7 @@ pipeline {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "localhost:8081"
-        NEXUS_REPOSITORY = "maven-snapshots"
+        NEXUS_REPOSITORY = "maven-webapp-repo"
         NEXUS_CREDENTIAL_ID = "nexus"
     }
 
@@ -33,7 +33,6 @@ pipeline {
             steps {
                 echo 'Deploying war in Test'
                 sh 'cp target/myweb.war /opt/tomcat/webapps'
-		sh 'sleep 100'
             }
         }
 
